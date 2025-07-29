@@ -1,0 +1,195 @@
+:root {
+  --bg: #4d6049;
+  --text: #222;
+  --card: #fff;
+  --light-box: #f4f4ef;
+  --input-border: #aaa;
+}
+
+.dark {
+  --bg: #1e1e1e;
+  --text: #fdfdfd;
+  --card: #2c2c2c;
+  --light-box: #3a3a3a;
+  --input-border: #666;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: #f4f4ef;
+}
+
+.mode-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.todo-sheet {
+  background-color: var(--card);
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.date-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.date-row label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.date-row input {
+  padding: 8px;
+  border: none;
+  border-bottom: 2px dotted var(--input-border);
+  background: transparent;
+  width: 150px;
+  color: var(--text);
+}
+.add-task-bar{
+  margin :1rem 0rem;
+}
+#taskInput {
+  width: 90%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+#todo-list li input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.column {
+  flex: 1 1 300px;
+}
+
+.column h3 {
+  background-color: var(--light-box);
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+ul li input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+ul li input[type="text"] {
+  flex: 1;
+  border: none;
+  border-bottom: 1px dotted var(--input-border);
+  background: transparent;
+  padding: 6px;
+  color: var(--text);
+}
+
+button {
+  margin: 8px 4px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.box {
+  background-color: var(--light-box);
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.box label {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.box textarea {
+  width: 100%;
+  border: none;
+  background: transparent;
+  resize: none;
+  font-family: inherit;
+  padding: 1px 2px;
+  border: 1px dotted var(--input-border);
+  border-radius: 8px;
+  color: var(--text);
+}
+
+/* #bgColorPicker{
+  position: absolute;
+  top: 26px;
+  right: 80px;
+  cursor: pointer;
+  border: 1px solid white;
+  background: wheat;
+}  */
+
+#current-time{
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text);
+  margin-top: 5px;
+}
+
+.add-priority-bar {
+  margin-bottom: 1rem;
+}
+
+#priorityInput {
+  width: 90%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}

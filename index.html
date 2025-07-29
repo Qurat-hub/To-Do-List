@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elegant To-Do List</title>
+  <link rel="stylesheet" href="todo.css" />
+</head>
+<body>
+ <button class="mode-toggle" onclick="togglmode()">🌓</button>
+<!-- <input type="color" id="bgColorPicker" title="pick Background color"/> -->
+ <h1 class="main-heading">TO DO LIST</h1>
+
+  <div class="todo-sheet">
+    <div class="date-row">
+      <div>
+       <label for="time">TIME</label>
+<div id="current-time">--:--:--</div>
+
+      </div>
+      <div>
+       <label for="date">DATE</label>
+<input type="date" id="date" />
+
+      </div>
+    </div>
+
+    
+    
+    <div class="columns">
+      <div class="column left">
+        <h3>TO DO</h3>
+        <div class="add-task-bar">
+          <input type="text" id="taskInput" placeholder="Add a new task" />
+        </div>
+        <ul id="todo-list"></ul>
+        <button onclick="deleteCompleted()" class="delete-btn">Completed </button>
+        
+      </div>
+
+      <div class="column right">
+        <h3>PRIORITIES</h3>
+         <div class="add-priority-bar">
+    <input type="text" id="priorityInput" placeholder="Add a priority item" />
+  </div>
+
+        <ul id="priority-list"></ul>
+  <button onclick="deleteCompletedPriorities()" class="delete-btn">Completed</button>
+
+        <div class="box">
+          <label>NOTES</label>
+          <textarea rows="4" placeholder="Write your notes..."></textarea>
+        </div>
+
+        <div class="box">
+          <label>REMINDER</label>
+          <textarea rows="3" placeholder="Set reminders..."></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
