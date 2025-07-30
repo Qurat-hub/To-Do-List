@@ -125,7 +125,30 @@ function deleteCompletedPriorities() {
   });
   savePriorities();
 }
+function deleteAllTasks() {
+  document.getElementById("todo-list").innerHTML = "";
+  saveTasks();
+}
 
+// Delete all priorities
+function deleteAllPriorities() {
+  document.getElementById("priority-list").innerHTML = "";
+  savePriorities();
+}
+
+function deleteAllTasks() {
+  if (confirm("Are you sure you want to delete all tasks?")) {
+    document.getElementById("todo-list").innerHTML = "";
+    saveTasks();
+  }
+}
+
+function deleteAllPriorities() {
+  if (confirm("Are you sure you want to delete all priorities?")) {
+    document.getElementById("priority-list").innerHTML = "";
+    savePriorities();
+  }
+}
 // Save tasks
 function saveTasks() {
   const list = document.querySelectorAll("#todo-list li");
