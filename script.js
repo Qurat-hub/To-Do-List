@@ -125,6 +125,8 @@ function deleteCompletedPriorities() {
   });
   savePriorities();
 }
+
+// Delete all tasks
 function deleteAllTasks() {
   document.getElementById("todo-list").innerHTML = "";
   saveTasks();
@@ -149,6 +151,7 @@ function deleteAllPriorities() {
     savePriorities();
   }
 }
+
 // Save tasks
 function saveTasks() {
   const list = document.querySelectorAll("#todo-list li");
