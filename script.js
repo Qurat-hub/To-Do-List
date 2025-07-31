@@ -75,9 +75,33 @@ function addTask(taskText, completed = false) {
     span.style.textDecoration = checkbox.checked ? "line-through" : "none";
     saveTasks();
   });
+onst editBtn = document.createElement("button");
+  editBtn.textContent = "✏️";
+  editBtn.className = "edit-btn";
+  editBtn.addEventListener("click", () => {
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = span.textContent;
+    input.className = "edit-input";
+    li.replaceChild(input, span);
+    input.focus();
+
+    input.addEventListener("blur", () => {
+      span.textContent = input.value.trim();
+      li.replaceChild(span, input);
+      saveTasks();
+    });
+
+    input.addEventListener("keydown", e => {
+      if (e.key === "Enter") {
+        input.blur();
+      }
+    });
+  });
 
   li.appendChild(checkbox);
   li.appendChild(span);
+  li.appendChild(editBtn);
   ul.appendChild(li);
 }
 
@@ -98,9 +122,33 @@ function addPriority(priorityText, completed = false) {
     span.style.textDecoration = checkbox.checked ? "line-through" : "none";
     savePriorities();
   });
+const editBtn = document.createElement("button");
+  editBtn.textContent = "✏️";
+  editBtn.className = "edit-btn";
+  editBtn.addEventListener("click", () => {
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = span.textContent;
+    input.className = "edit-input";
+    li.replaceChild(input, span);
+    input.focus();
+
+    input.addEventListener("blur", () => {
+      span.textContent = input.value.trim();
+      li.replaceChild(span, input);
+      saveTasks();
+    });
+
+    input.addEventListener("keydown", e => {
+      if (e.key === "Enter") {
+        input.blur();
+      }
+    });
+  });
 
   li.appendChild(checkbox);
   li.appendChild(span);
+  li.appendChild(editBtn);
   ul.appendChild(li);
 }
 
