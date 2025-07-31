@@ -75,7 +75,8 @@ function addTask(taskText, completed = false) {
     span.style.textDecoration = checkbox.checked ? "line-through" : "none";
     saveTasks();
   });
-onst editBtn = document.createElement("button");
+  
+const editBtn = document.createElement("button");
   editBtn.textContent = "✏️";
   editBtn.className = "edit-btn";
   editBtn.addEventListener("click", () => {
@@ -136,7 +137,7 @@ const editBtn = document.createElement("button");
     input.addEventListener("blur", () => {
       span.textContent = input.value.trim();
       li.replaceChild(span, input);
-      saveTasks();
+      savePriorities();
     });
 
     input.addEventListener("keydown", e => {
@@ -145,7 +146,6 @@ const editBtn = document.createElement("button");
       }
     });
   });
-
   li.appendChild(checkbox);
   li.appendChild(span);
   li.appendChild(editBtn);
