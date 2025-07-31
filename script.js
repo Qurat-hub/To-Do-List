@@ -127,16 +127,16 @@ function deleteCompletedPriorities() {
 }
 
 // Delete all tasks
-function deleteAllTasks() {
-  document.getElementById("todo-list").innerHTML = "";
-  saveTasks();
-}
+// function deleteAllTasks() {
+//   document.getElementById("todo-list").innerHTML = "";
+//   saveTasks();
+// }
 
 // Delete all priorities
-function deleteAllPriorities() {
-  document.getElementById("priority-list").innerHTML = "";
-  savePriorities();
-}
+// function deleteAllPriorities() {
+//   document.getElementById("priority-list").innerHTML = "";
+//   savePriorities();
+// }
 
 function deleteAllTasks() {
   if (confirm("Are you sure you want to delete all tasks?")) {
